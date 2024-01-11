@@ -68,7 +68,7 @@ jobs:
       - name: Build APK
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: :extensions:${{ env.BASESLUG }}:${{ env.EXTSLUG }}:assembleDebug
+          arguments: :extensions:${{ env.BASESLUG }}:${{ env.EXTSLUG }}:assembleDebug --info
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
